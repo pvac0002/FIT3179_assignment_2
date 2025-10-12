@@ -1,0 +1,11 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Passengers in Australian airports",
+    "data": {
+        "url": "fuel_sales.xls"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "Aviation Turbine Fuel", "type": "quantitative"}
+}}
