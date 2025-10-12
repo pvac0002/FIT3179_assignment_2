@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Passengers in Australian airports",
+    "data": {
+        "url": "WebMonthlyAirportJune2025.xlsx",
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+}
+    }
+}
