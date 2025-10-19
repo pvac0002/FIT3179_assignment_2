@@ -1,23 +1,21 @@
-{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Passengers in Australian Airports (Total Flights Over Time)",
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Total Domestic Aircraft Trips by Destination City (All Years Combined since 1984)",
   "data": {
-    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/flight_numbers.csv" 
+    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/flight_pairs.csv"
   },
   "transform": [
-    {"calculate": "toDate(datum.Year + '-' + datum['Month num'] + '-01')",
-      "as": "Date"
+    {"aggregate": [
+        {"op": "sum", "field": "Aircraft Trips", "as": "Total Aircraft Trips"}],
+      "groupby": ["City2"]
     }
   ],
-  "mark": "line",
-  "encoding": {
-    "x": {"field": "Date","type": "temporal","title": "Year and Month","axis": {"labelAngle": -45}
-    },
-    "y": {"aggregate": "sum","field": "All Flights","type": "quantitative","title": "Total Flights"
-    },
+  "mark": {"type": "arc", "outerRadius": 160},
+  "encoding": {"theta": {"field": "Total Aircraft Trips","type": "quantitative", "title": "Total Aircraft Trips"},
+    "color": {"field": "City2", "type": "nominal", "title": "Destination City"},
     "tooltip": [
-      {"field": "Month", "type": "ordinal"},
-      {"field": "Year", "type": "quantitative"},
-      {"aggregate": "sum", "field": "All Flights", "type": "quantitative", "title": "Total Flights"}
+      {"field": "City2", "type": "nominal", "title": "Destination City"},
+      {"field": "Total Aircraft Trips", "type": "quantitative", "title": "Total Trips"}
     ]
   }
 }
