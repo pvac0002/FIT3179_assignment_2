@@ -9,3 +9,23 @@ vegaEmbed("#graph1", vg_2).then(function(result) {
 var vg_3 = "FIT3179_Assignment_2_graph2.vg.json";
 vegaEmbed("#graph2", vg_3).then(function(result) {
 }).catch(console.error);
+
+var vg_4 = "FIT3179_Assignment_2_graph3.vg.json";
+vegaEmbed("#graph3", vg_4).then(function(result) {
+}).catch(console.error);
+
+var vg_5 = "FIT3179_Assignment_2_graph4.vg.json";
+vegaEmbed("#graph4", vg_5).then(function(result) {
+}).catch(console.error);
+
+var vg_6 = "FIT3179_Assignment_2_graph5.vg.json";
+vegaEmbed("#graph5", vg_6).then(function(result) {
+}).catch(console.error);
+
+var vg_7 = "FIT3179_Assignment_2_graph6.vg.json";
+vegaEmbed("#graph6", vg_7).then(function(result) {
+}).catch(console.error);
+
+var vg_8 = "FIT3179_Assignment_2_graph7.vg.json";
+vegaEmbed("#graph7", vg_8).then(function(result) {
+}).catch(console.error);
