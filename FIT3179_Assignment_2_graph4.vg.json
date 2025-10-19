@@ -10,9 +10,7 @@
     "y": {"field": "% Change","type": "quantitative","title": "Change in Seats Availible (%)"
     },
     "tooltip": [
-      {"field": "Month", "type": "ordinal"},
-      {"field": "Year", "type": "quantitative"},
-      {"aggregate": "sum", "field": "All Flights", "type": "quantitative", "title": "Total Flights"}
-    ]
+      {"field": "City-Pair", "type": "nominal", "title": "City-Pair"},
+      {"field": "% Change", "type": "quantitative"}]  
   }
 }
