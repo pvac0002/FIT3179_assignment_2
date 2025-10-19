@@ -7,6 +7,6 @@
     "mark": "bar",
     "encoding": {
         "x": {"field": "Month", "type": "ordinal"},
-        "y": {"field": "All_Flights", "type": "quantitative"}
+        "y": {"field": "All Flights", "type": "quantitative"}
         }
 }
