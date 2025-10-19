@@ -1,11 +1,22 @@
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Passengers in Australian airports",
-    "data": {
-        "url": "fuel_sales.csv"
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Annual and Quarterly Sales of Aviation Turbine Fuel",
+  "data": {
+    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/fuel_sales.csv"
+  },
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "title": "Year" },
+    "y": {"field": "Aviation Turbine Fuel", "type": "quantitative", "title": "Aviation Turbine Fuel Sold (Megalitres)"
     },
-    "mark": "bar",
-    "encoding": {
-        "x": {"field": "year", "type": "ordinal"},
-        "y": {"field": "Aviation Turbine Fuel", "type": "quantitative"}
-}}
+    "color": {"field": "quarter", "type": "ordinal","title": "Quarter","scale": {
+        "domain": ["September", "December", "March", "June"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]
+      }
+    },
+    "tooltip": [
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "quarter", "type": "ordinal", "title": "Quarter"},
+      {"aggregate": "sum", "field": "Aviation Turbine Fuel", "type": "quantitative", "title": "Fuel Sold (ML)"}
+    ]
+  }
+}
