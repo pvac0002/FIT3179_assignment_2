@@ -1,18 +1,13 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Passengers in Australian Airports (Total Flights Over Time)",
   "data": {
-    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/flight_numbers.csv" 
+    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/domestic_airlines_2024_seats.csv" 
   },
-  "transform": [
-    {"calculate": "toDate(datum.Year + '-' + datum['Month num'] + '-01')",
-      "as": "Date"
-    }
-  ],
   "mark": "line",
   "encoding": {
-    "x": {"field": "Date","type": "temporal","title": "Year and Month","axis": {"labelAngle": -45}
+    "x": {"field": "City-Pair","type": "nominal","title": "City-Pair","axis": {"labelAngle": -45}
     },
-    "y": {"aggregate": "sum","field": "All Flights","type": "quantitative","title": "Total Flights"
+    "y": {"field": "% Change","type": "quantitative","title": "Change in Seats Availible (%)"
     },
     "tooltip": [
       {"field": "Month", "type": "ordinal"},
