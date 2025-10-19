@@ -24,7 +24,7 @@
                 "url": "au-airports.csv"
             },
             "transform": [
-                {"filter":"datum.type == 'large_airport'"}
+                {"filter":"datum.type == 'large airport'"}
             ],
             "mark": {"type": "circle", "color": "red", "size": 500, "opacity": 1},
             "encoding": {
@@ -41,7 +41,7 @@
                 "url": "au-airports.csv"
             },
             "transform": [
-                {"filter":"datum.type == 'medium_airport'"}
+                {"filter":"datum.type == 'medium airport'"}
             ],
             "mark": {"type": "circle", "color": "green", "size": 50, "opacity": 1},
             "encoding": {
@@ -58,7 +58,7 @@
                 "url": "au-airports.csv"
             },
             "transform": [
-                {"filter":"datum.type == 'small_airport'"}
+                {"filter":"datum.type == 'small airport'"}
             ],
             "mark": {"type": "circle", "color": "blue", "size": 5, "opacity": 1},
             "encoding": {
