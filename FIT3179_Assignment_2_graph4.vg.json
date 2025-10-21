@@ -1,16 +1,17 @@
-{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Passengers in Australian Airports (Total Flights Over Time)",
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Change in Seats Available Over Time by City Pair (2024)",
   "data": {
-    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/domestic_airlines_2024_seats.csv" 
+    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/domestic_airlines_2024_seats.csv"
   },
-  "mark": "line",
+  "mark": "bar",
   "encoding": {
-    "x": {"field": "City-Pair","type": "nominal","title": "City-Pair","axis": {"labelAngle": -45}
-    },
-    "y": {"field": "% Change","type": "quantitative","title": "Change in Seats Availible (%)"
-    },
+    "x": {"field": "City-Pair","type": "nominal","title": "City pair"},
+    "y": {"field": "% Change","type": "quantitative","title": "Change in Seats Available (%)"},
+    "color": {"field": "City-Pair","type": "nominal","title": "City Pair"},
     "tooltip": [
-      {"field": "City-Pair", "type": "nominal", "title": "City-Pair"},
-      {"field": "% Change", "type": "quantitative"}]  
+      {"field": "City-Pair", "type": "nominal", "title": "City Pair"},
+      {"field": "% Change", "type": "quantitative", "title": "% Change from YE 2023"}
+    ]
   }
 }
