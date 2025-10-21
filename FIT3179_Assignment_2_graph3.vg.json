@@ -7,14 +7,22 @@
   "transform": [
     {"aggregate": [
         {"op": "sum", "field": "Aircraft Trips", "as": "Total Aircraft Trips"}],
-      "groupby": ["City2"]
-    }
-  ],
+      "groupby": ["City2"]},
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "Total Aircraft Trips", "order": "descending"}]},
+    {
+      "calculate": "datum.rank <= 8? datum.City2 : 'Other'",
+      "as": "City" },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Total Aircraft Trips", "as": "Total Aircraft Trips"}],
+      "groupby": ["City"]}],
   "mark": {"type": "arc", "outerRadius": 160},
   "encoding": {"theta": {"field": "Total Aircraft Trips","type": "quantitative", "title": "Total Aircraft Trips"},
-    "color": {"field": "City2", "type": "nominal", "title": "Destination City"},
+    "color": {"field": "City", "type": "nominal", "title": "Destination City"},
     "tooltip": [
-      {"field": "City2", "type": "nominal", "title": "Destination City"},
+      {"field": "City", "type": "nominal", "title": "Destination City"},
       {"field": "Total Aircraft Trips", "type": "quantitative", "title": "Total Trips"}
     ]
   }
