@@ -11,7 +11,9 @@
     "color": {"field": "City-Pair","type": "nominal","title": "City Pair"},
     "tooltip": [
       {"field": "City-Pair", "type": "nominal", "title": "City Pair"},
-      {"field": "% Change", "type": "quantitative", "title": "% Change from YE 2023"}
+      {"field": "% Change", "type": "quantitative", "title": "% Change from YE 2023"},
+      {"field": "YE Dec 2023", "type": "nominal", "title": "Seats Available YE 2023"},
+      {"field": "YE Dec 2024", "type": "nominal", "title": "Seats Available YE 2024"}
     ]
   }
 }
