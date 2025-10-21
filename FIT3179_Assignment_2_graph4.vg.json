@@ -4,6 +4,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/domestic_airlines_2024_seats.csv"
   },
+  "width": 600,
+  "height": 400,
   "mark": "bar",
   "encoding": {
     "x": {"field": "City-Pair","type": "nominal","title": "City pair"},

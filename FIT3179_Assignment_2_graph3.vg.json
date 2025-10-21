@@ -4,6 +4,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/flight_pairs.csv"
   },
+  "width": 600,
+  "height": 500,
   "transform": [
     {"aggregate": [
         {"op": "sum", "field": "Aircraft Trips", "as": "Total Aircraft Trips"}],

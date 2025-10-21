@@ -3,6 +3,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/flight_numbers.csv" 
   },
+  "width": 600,
+  "height": 400,
   "transform": [
     {"calculate": "toDate(datum.Year + '-' + datum['Month num'] + '-01')",
       "as": "Date"

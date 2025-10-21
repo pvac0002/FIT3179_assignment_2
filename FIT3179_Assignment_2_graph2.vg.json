@@ -3,6 +3,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/aviation_fuel.csv"
   },
+  "width": 600,
+  "height": 400,
   "mark":{"type": "bar"},
   "encoding": {
     "x": {"field": "year", "type": "ordinal", "title": "Year", "sort": "ascending"},
