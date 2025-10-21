@@ -1,11 +1,11 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Annual and Quarterly Sales of Aviation Turbine Fuel",
   "data": {
-    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/fuel_sales.csv"
+    "url": "https://raw.githubusercontent.com/pvac0002/FIT3179_assignment_2/refs/heads/main/aviation_fuel.csv"
   },
-  "mark": {"type": "bar"},
+  "mark":{"type": "bar"},
   "encoding": {
-    "x": {"field": "year", "type": "ordinal", "title": "Year" },
+    "x": {"field": "year", "type": "ordinal", "title": "Year", "sort": "ascending"},
     "y": {"field": "Aviation Turbine Fuel", "type": "quantitative", "title": "Aviation Turbine Fuel Sold (Megalitres)"
     },
     "color": {"field": "quarter", "type": "ordinal","title": "Quarter","scale": {
@@ -16,7 +16,7 @@
     "tooltip": [
       {"field": "year", "type": "ordinal", "title": "Year"},
       {"field": "quarter", "type": "ordinal", "title": "Quarter"},
-      {"aggregate": "sum", "field": "Aviation Turbine Fuel", "type": "quantitative", "title": "Fuel Sold (ML)"}
+      {"aggregate": "sum", "field": "Aviation Turbine Fuel", "type": "quantitative", "title": "Fuel Sold (Megalitres)"}
     ]
   }
 }
